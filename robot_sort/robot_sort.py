@@ -150,7 +150,43 @@ class SortingRobot:
                 # drop item
                 self.swap_item() # pick up None
                 self.set_light_off() # holding NONE
- 
+
+#  '''second attempt: (not turning lights)'''
+#     def sort(self):
+#             """
+#             Sort the robot's list.
+#             """
+#             # Insertion -> Move smallest values to the left
+#             # pick up first item, drop NONE
+#             self.swap_item() 
+#             while True: # creating a loop 
+#                 # if we can move right, do it
+#                 while self.can_move_right(): 
+#                     # move right
+#                     self.move_right() 
+#                     # if were holding a bigger item, put it down, pick up smaller
+#                     if self.compare_item() == 1: 
+#                         self.swap_item()    
+#                     # continue picking smaller numbers to the right until we cant move right anymore       
+                
+#                 # if None is neither held or on the floor, move left until we find None
+#                 while self.compare_item() is not None:
+#                     self.move_left() 
+
+#                 # pick up None, drop our item
+#                 self.swap_item()
+
+#                 # if We are at the end of our list, exit loop 
+#                 if not self.can_move_right():
+#                     break 
+                
+#                 # else, move to the right with None
+#                 self.move_right()
+#                 # put None down, pick up item
+#                 self.swap_item()
+
+#                 #repeat the process until we cant move right
+
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
